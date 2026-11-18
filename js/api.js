@@ -15,7 +15,7 @@ export async function request(method, route, body) {
    return data;
 }
 
-export async function getPokemon(){
+export async function getCreatures(){
 return await request("GET", "/creatures");
 
 }

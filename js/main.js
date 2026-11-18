@@ -1,11 +1,15 @@
-import { getPokemon } from "./api.js";
+import { getCreatures } from "./api.js";
 import { mettreAjourListe } from "./ui.js";
 
 async function chargerPokemons() {
- const pokemons = await getPokemon();
+    try {
+        const pokemons = await getCreatures();
+        console.log(pokemons);
+        mettreAjourListe(pokemons);
 
-mettreAjourListe(pokemons);
+    } catch (error) {
+        console.log("Erreur :", error);
+    }
 
-chargerPokemons();
 }
-console.log(pokemons);
+chargerPokemons();
