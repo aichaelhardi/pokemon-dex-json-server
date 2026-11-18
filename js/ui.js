@@ -133,24 +133,11 @@ export function afficherCreatures(liste) {
 
             <div class="text-xs text-muted flex gap-2">
                 <span>Niveau : ${creature.level ?? "N/A"}</span>
-            </div>
+            </div>`;
 
-            <button
-                type="button"
-                class="btn-equipe w-full py-2.5 rounded-xl border-2 border-gray-800 font-bold
-                ${isInTeam ? "bg-blue-600 text-white" : "text-gray-800"}"
-            >
-                ${isInTeam ? "Retirer de l'équipe" : "Ajouter à l'équipe"}
-            </button>
+        
 
-            <button
-                type="button"
-                class="btn-favori w-full py-2.5 rounded-xl border-2 border-pink-500 font-bold
-                ${isInFavorite ? "bg-pink-500 text-white" : "text-pink-600"}"
-            >
-                ${isInFavorite ? "❤️ Retirer des favoris" : "🤍 Ajouter aux favoris"}
-            </button>
-        `;
+         
 
         carte.addEventListener("click", function (event) {
             if (event.target.closest("button")) return;
